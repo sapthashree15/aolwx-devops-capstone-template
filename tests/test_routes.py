@@ -197,7 +197,7 @@ class TestAccountService(TestCase):
             self.assertEqual(response.headers.get(key), value)
 
     # test case for checking that the CORS headers is present
-    def test_cors_security(self):
+        def test_cors_security(self):
         """It should return a CORS header"""
         response = self.client.get('/', environ_overrides=HTTPS_ENVIRON)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
